@@ -1,0 +1,16 @@
+{
+    "module":[
+        {
+            "cod_turma": 1,
+            "sigla": "1º DS"
+        },
+        {
+            "cod_turma": 2,
+            "sigla": "2º DS"
+        },
+        {
+            "cod_turma": 3,
+            "sigla": "3º DS"
+        }
+    ]
+}

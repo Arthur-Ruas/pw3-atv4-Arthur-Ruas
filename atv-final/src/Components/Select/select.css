@@ -1,0 +1,37 @@
+.select{ 
+    display: flex;
+    flex-direction: column;  
+    gap: 5px; 
+    margin-bottom: 20px;       
+} 
+
+.select{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.select > label{
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    background-color: #fff;
+    color: #005452;
+    padding: 0 .4rem;
+    border: 1px solid #005452;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.select > select{
+    background-color: #fff;
+    color: #444;
+    padding: .6rem .7rem;
+    border: 1px solid #005452;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.select > select:focus{
+    outline: none;
+}
