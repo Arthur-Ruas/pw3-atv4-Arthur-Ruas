@@ -78,7 +78,7 @@ function Form() {
             <h1 className='form__title'>Cadastro de <span>Turma</span></h1>
             <div className='form__wrapper-input'>
                 <Input type='text' name='nome__modulo' id='nome__modulo' text='Nome da turma' handlerOnChange={handlerChangeTeam}/>
-                <Select name='categoria_id' text='Categoria' options={modules} handlerOnChange={handlerChangeCategory}/>
+                <Select name='categoria_id' text='Turma' options={modules} handlerOnChange={handlerChangeCategory}/>
             </div>
             <button className='form__button-submit' type='submit'>Cadastrar</button>
         </form>
