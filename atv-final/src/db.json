@@ -1,16 +1,58 @@
 {
-    "module":[
-        {
-            "cod_turma": 1,
-            "sigla": "1º DS"
-        },
-        {
-            "cod_turma": 2,
-            "sigla": "2º DS"
-        },
-        {
-            "cod_turma": 3,
-            "sigla": "3º DS"
-        }
-    ]
+  "team": [
+    {
+      "id": "d219",
+      "category": {
+        "id": "1",
+        "category": "1º DS"
+      },
+      "nome__modulo": "dasd"
+    },
+    {
+      "id": "5416",
+      "category": {
+        "id": "2",
+        "category": "2º DS"
+      },
+      "nome__modulo": "dasdfdsfds"
+    },
+    {
+      "id": "716d",
+      "nome__modulo": "Teste",
+      "category": {
+        "id": "1",
+        "category": "1º DS"
+      }
+    },
+    {
+      "id": "00d9",
+      "nome__modulo": "Teste",
+      "category": {
+        "id": "1",
+        "category": "1º DS"
+      }
+    },
+    {
+      "id": "19d2",
+      "nome__modulo": "dsada",
+      "category": {
+        "id": "3",
+        "category": "3º DS"
+      }
+    }
+  ],
+  "module": [
+    {
+      "cod_turma": 1,
+      "sigla": "1º DS"
+    },
+    {
+      "cod_turma": 2,
+      "sigla": "2º DS"
+    },
+    {
+      "cod_turma": 3,
+      "sigla": "3º DS"
+    }
+  ]
 }
