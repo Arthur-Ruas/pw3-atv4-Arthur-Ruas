@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './form.css';
+import { useNavigate } from 'react-router-dom';
 
-import Input from '../Input/Input';
-import Select from '../Select/Select';
+import Input from '../../Components/Input/Input';
+import Select from '../../Components/Select/Select';
 
 function Form() {
 
+  const navigate = useNavigate();
+
   const [team, setTeam] = useState([])
   const [modules, setmodules] = useState([]);
+
   useEffect(() =>{
     fetch(
       'http://localhost:5000/module',
@@ -23,6 +27,7 @@ function Form() {
     ).then(
       (data) =>{
         setmodules(data)
+
       }
     ).catch(
       (error) =>{
@@ -59,6 +64,7 @@ function Form() {
     ).then(
       (data)=>{
         console.log(data)
+        navigate('/turmas', {state: 'Turma cadastrada com sucesso!'});
       }
     ).catch(
       (error)=>{

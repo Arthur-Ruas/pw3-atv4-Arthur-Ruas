@@ -39,20 +39,39 @@
         "id": "3",
         "category": "3º DS"
       }
+    },
+    {
+      "id": "a4b3",
+      "nome__modulo": "sa",
+      "category": {
+        "id": "1",
+        "category": "1º DS"
+      }
+    },
+    {
+      "id": "fe47",
+      "nome__modulo": "a",
+      "category": {
+        "id": "1",
+        "category": "1º DS"
+      }
     }
   ],
   "module": [
     {
       "cod_turma": 1,
-      "sigla": "1º DS"
+      "sigla": "1º DS",
+      "id": "ba8e"
     },
     {
       "cod_turma": 2,
-      "sigla": "2º DS"
+      "sigla": "2º DS",
+      "id": "0a30"
     },
     {
       "cod_turma": 3,
-      "sigla": "3º DS"
+      "sigla": "3º DS",
+      "id": "c50a"
     }
   ]
 }
