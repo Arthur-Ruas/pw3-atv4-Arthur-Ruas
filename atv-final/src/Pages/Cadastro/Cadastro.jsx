@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import './form.css';
+import './cadastro.css';
 import { useNavigate } from 'react-router-dom';
 
-import Input from '../../Components/Input/Input';
-import Select from '../../Components/Select/Select';
+import Input from '../../Components/Form/Input/Input';
+import Select from '../../Components/Form/Select/Select';
 
-function Form() {
+function Cadastro() {
 
   const navigate = useNavigate();
 
-  const [team, setTeam] = useState([])
-  const [modules, setmodules] = useState([]);
+  const [turma, setTurma] = useState([]);
+  const [modulo, setModulo] = useState([]);
 
   useEffect(() =>{
     fetch(
-      'http://localhost:5000/module',
+      'http://localhost:5000/modulo',
       {
         method: 'GET',
         headers:{
@@ -26,7 +26,7 @@ function Form() {
       
     ).then(
       (data) =>{
-        setmodules(data)
+        setModulo(data)
 
       }
     ).catch(
@@ -36,27 +36,27 @@ function Form() {
     )
   }, []);
 
-  function handlerChangeTeam(event){
-    setTeam({...team, [event.target.name] : event.target.value});
-    console.log(team)
+  function handlerChangeTurma(event){
+    setTurma({...turma, [event.target.name] : event.target.value});
+    console.log(turma)
   }
 
-  function handlerChangeCategory(event){
-    setTeam({...team, category: {
+  function handlerChangeModulo(event){
+    setTurma({...turma, modulo: {
       id: event.target.value,
-      category: event.target.options[event.target.selectedIndex].text
+      modulo: event.target.options[event.target.selectedIndex].text
     }});
   }
-  console.log(team)
+  console.log(turma)
 
-  function createTeam(team){
-    fetch('http://localhost:5000/team', 
+  function createTurma(turma){
+    fetch('http://localhost:5000/turma', 
       {
         method: 'POST',
         headers:{
           'Content-Type':'application/json'
         },
-        body: JSON.stringify(team)
+        body: JSON.stringify(turma)
       }
     ).then(
       (response)=>response.json()
@@ -75,7 +75,7 @@ function Form() {
 
   function submit(event){
     event.preventDefault()
-    createTeam(team)
+    createTurma(turma)
   }
 
   return (
@@ -83,8 +83,8 @@ function Form() {
         <form onSubmit={submit}>
             <h1 className='form__title'>Cadastro de <span>Turma</span></h1>
             <div className='form__wrapper-input'>
-                <Input type='text' name='nome__modulo' id='nome__modulo' text='Nome da turma' handlerOnChange={handlerChangeTeam}/>
-                <Select name='categoria_id' text='Módulo' options={modules} handlerOnChange={handlerChangeCategory}/>
+                <Input type='text' name='nome' id='nome' text='Nome da turma' handlerOnChange={handlerChangeTurma}/>
+                <Select name='categoria_id' text='Módulo' options={modulo} handlerOnChange={handlerChangeModulo}/>
             </div>
             <button className='form__button-submit' type='submit'>Cadastrar</button>
         </form>
@@ -92,4 +92,4 @@ function Form() {
   )
 }
 
-export default Form;
+export default Cadastro;

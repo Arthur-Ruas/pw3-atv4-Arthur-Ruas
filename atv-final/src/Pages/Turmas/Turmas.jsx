@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import Message from '../../Components/Message/Message';
-import CardTeam from '../../Components/CardTeam/CardTeam';
+import Messagem from '../../Components/Messagem/Messagem';
+import CardTurma from '../../Components/CardTurma/CardTurma';
 
 function Turmas() {
 
   const [turmaArray, setTurmaArray]  = useState([]);
+  const [deleteMessagem, setDeleteMessagem] = useState('');
 
   useEffect(() =>{
     fetch(
-      'http://localhost:5000/team', 
+      'http://localhost:5000/turma', 
       { 
         method: 'GET',
         headers: {
@@ -24,32 +25,58 @@ function Turmas() {
     ).catch(
       (error) => console.log(error)
     )
-  }, []);
+  }, [turmaArray]);
+
+  function removeTurma(id){
+    fetch(`http://localhost:5000/turma/${id}`, 
+      { 
+        method: 'DELETE',
+        headers: {
+          'Content-Type':'application/json'
+        },
+      }
+    ).then(
+      (response) => response.json()
+    ).then(
+      () => {setDeleteMessagem('Livro excluído com sucesso!')}
+    ).catch(
+      (error) => console.log(error)
+    )
+  }
 
   const location = useLocation();
-  let message = '';
+  let messagem = '';
 
   console.log('Location state: ' + location.state)
 
   if(location.state){
-    message = location.state;
+    messagem = location.state;
   }
 
   return (
     <section>
       {
-        message && (
-          <Message
-            msg={message}
+        messagem && (
+          <Messagem
+            msg={messagem}
+            type="success"/>
+        )
+      }
+      {
+        deleteMessagem && (
+          <Messagem
+            msg={deleteMessagem}
             type="success"/>
         )
       }
       {
         turmaArray.map((turma) => {
           return(
-            <CardTeam
-            turma={turma.nome__modulo}
-            categoria={turma.category.category}/>
+            <CardTurma
+            id={turma.id}
+            turma={turma.nome}
+            modulo={turma.modulo.modulo}
+            handlerRemove={removeTurma}/>
           );
         })
       }

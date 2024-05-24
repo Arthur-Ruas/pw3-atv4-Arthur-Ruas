@@ -3,9 +3,10 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import NavBar from './Components/NavBar/NavBar';
-import Home from './Pages/Home/Home';
-import Form from './Pages/Form/Form';
+import Inicio from './Pages/Inicio/Inicio';
+import Cadastro from './Pages/Cadastro/Cadastro';
 import Turmas from './Pages/Turmas/Turmas';
+import Editar from './Pages/Editar/Editar';
 
 function App() {
 
@@ -14,9 +15,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<NavBar/>}>
-            <Route index element={<Home/>}/>
+            <Route index element={<Inicio/>}/>
             <Route path='/turmas' element={<Turmas/>}/>
-            <Route path='/form' element={<Form/>}/>
+            <Route path='/cadastro' element={<Cadastro/>}/>
+            <Route path='/editar/:id' element={<Editar/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

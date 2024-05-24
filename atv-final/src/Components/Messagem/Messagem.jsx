@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import styles from './message.css';
+import styles from './messagem.css';
 
-function Message({type, msg}) {
+function Messagem({type, msg}) {
 
     const [visible, setVisible] = useState(false);
 
@@ -37,4 +37,4 @@ function Message({type, msg}) {
 }
 
 
-export default Message;
+export default Messagem;

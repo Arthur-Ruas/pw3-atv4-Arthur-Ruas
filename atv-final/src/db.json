@@ -1,63 +1,23 @@
 {
-  "team": [
+  "turma": [
     {
-      "id": "d219",
-      "category": {
-        "id": "1",
-        "category": "1º DS"
-      },
-      "nome__modulo": "dasd"
-    },
-    {
-      "id": "5416",
-      "category": {
-        "id": "2",
-        "category": "2º DS"
-      },
-      "nome__modulo": "dasdfdsfds"
-    },
-    {
-      "id": "716d",
-      "nome__modulo": "Teste",
-      "category": {
-        "id": "1",
-        "category": "1º DS"
-      }
-    },
-    {
-      "id": "00d9",
-      "nome__modulo": "Teste",
-      "category": {
-        "id": "1",
-        "category": "1º DS"
-      }
-    },
-    {
-      "id": "19d2",
-      "nome__modulo": "dsada",
-      "category": {
+      "id": "72ad",
+      "nome": "Arthur",
+      "modulo": {
         "id": "3",
-        "category": "3º DS"
+        "modulo": "3º DS"
       }
     },
     {
-      "id": "a4b3",
-      "nome__modulo": "sa",
-      "category": {
-        "id": "1",
-        "category": "1º DS"
-      }
-    },
-    {
-      "id": "fe47",
-      "nome__modulo": "a",
-      "category": {
-        "id": "1",
-        "category": "1º DS"
+      "id": "0358",
+      "nome": "Bananaana",
+      "modulo": {
+        "id": "3",
+        "modulo": "3º DS"
       }
     }
   ],
-  "module": [
+  "modulo": [
     {
       "cod_turma": 1,
       "sigla": "1º DS",

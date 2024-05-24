@@ -5,13 +5,13 @@ function NavBar() {
   return (
     <div>
         <Link to='/'>
-            <p>Home</p>
+            Inicio
         </Link>
         <Link to='/turmas'>
-            Turmas
+            Turma
         </Link>
-        <Link to='/form'>
-            Cadastro de Turma
+        <Link to='/cadastro'>
+            Cadastrar
         </Link>
         <Outlet/>
     </div>
